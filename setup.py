@@ -50,6 +50,7 @@ class BuildTun2socks(build_ext):
         cmake_args = [
             "cmake", "-S", str(ROOT_DIR), "-B", str(cmake_dir),
             "-DCMAKE_BUILD_TYPE=Release",
+            "-DCMAKE_POLICY_VERSION_MINIMUM=3.5",
             f"-DCMAKE_LIBRARY_OUTPUT_DIRECTORY={extension_path.parent.as_posix()}",
             f"-DTUN2SOCKS_ARCHIVE={archive_path.as_posix()}",
             f"-DTUN2SOCKS_INCLUDE_DIR={go_dir.as_posix()}",
